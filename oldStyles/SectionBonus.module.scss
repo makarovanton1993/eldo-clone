@@ -1,0 +1,181 @@
+.wrap{
+    max-width: 1200px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items:center;
+    padding: 60px 40px 18px;
+    border-radius:10px;
+    margin-bottom: 40px;
+    z-index: 11111111111111111111111111111;
+}
+.inner{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    & .bonus{
+        display: none;
+    }
+    & .auth{
+        position: relative;
+        flex: 0 0 260px;
+        margin-right: 20px;
+        
+        & .img{
+            position: absolute;
+            top: -125px;
+            left: -10px;
+            width: 190px;
+            height: 140px;
+        }
+        
+        & .title{
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: 600;
+            color:#262626;
+        }
+        & .btn{
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 500;
+            width: 100%;
+            border: 0;
+            background-color:#76bc21;
+            color: #fff;
+            height: 48px;
+            border-radius: 5px;
+            position: relative;
+            z-index: -1;
+        }
+    }
+    .list{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .item{
+        display: flex;
+        & svg{
+            margin-top: 14px;
+            margin-right: 5px;
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 1242px) {
+    .wrap{
+        max-width: 960px;
+        padding: 40px 18px;
+        & .inner{
+            justify-content: center;
+            align-items: center;
+            & .auth{
+                display: flex;
+                align-items:center;
+                margin: 0;
+                & .title{
+                   white-space: nowrap;
+                   margin-bottom: 0;
+                }
+                & .btn{
+                    margin-left: 20px;
+                    white-space: nowrap;
+                    padding: 0 50px;
+                }
+            }
+            & .list{
+                display: none;
+                
+            }
+        }
+    }
+    
+    
+    
+}
+@media only screen and (max-width: 760px) {
+    .wrap{
+        background-color:transparent;
+        padding: 20px 10px;
+        & .inner{
+            flex-direction: column;
+            align-items: flex-start;
+            & .bonus{
+                display: flex;
+                text-align: start;
+                font-weight: 600;
+                font-size: 20px ;
+                line-height:18px;
+            }
+            .auth{
+                flex-direction: column;
+                align-items:flex-start;
+                width: 100%;
+                flex: 0 0 auto;
+                & .img{
+                    display: none;
+                }
+                
+                & .title{
+                    font-size: 12px;
+                    line-height: 18px;
+                    color:#434343;
+                    font-weight: 400;
+                    margin: 5px 0 8px 0;
+                    width: 100%;
+                }
+                & .btn{
+                    margin-left: 0;
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    
+    
+}
+@media only screen and (max-width: 320px) {
+    .wrap{
+        background-color:transparent;
+        padding: 5px ;
+        margin-bottom: 10px;
+        & .inner{
+            flex-direction: column;
+            align-items: flex-start;
+            & .bonus{
+                display: flex;
+                text-align: start;
+                font-weight: 600;
+                font-size: 20px ;
+                line-height:18px;
+            }
+            .auth{
+                flex-direction: column;
+                align-items:flex-start;
+                width: 100%;
+                flex: 0 0 auto;
+                & .img{
+                    display: none;
+                }
+                
+                & .title{
+                    font-size: 12px;
+                    line-height: 18px;
+                    color:#434343;
+                    font-weight: 400;
+                    margin: 5px 0 8px 0;
+                    width: 100%;
+                }
+                & .btn{
+                    margin-left: 0;
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    
+    
+}

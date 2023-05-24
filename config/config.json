@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "79801853",
+    "database": "eldorado-clone",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "79801853",
+    "database": "eldorado-clone",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "79801853",
+    "database": "eldorado-clone",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
+
+

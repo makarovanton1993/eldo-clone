@@ -1,0 +1,22 @@
+.wrap{
+    height: 400px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    div{
+        margin-bottom: 20px;
+    }
+    button{
+        max-width: 150px;
+        width: 100%;
+        padding: 5px 5px;
+        color:#fff;
+        border: none;
+        font-size: 16px;
+        background-color: var(--main-color);
+        overflow: hidden;
+        display: block;
+    }
+}

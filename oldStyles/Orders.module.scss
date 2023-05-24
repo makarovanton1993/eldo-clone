@@ -1,0 +1,43 @@
+.wrap{
+    position: relative;
+    height: 150px;
+    width: 100%;
+    border: 1px dashed grey;
+    margin-bottom: 150px;
+    & .empty{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: inherit;
+        h3{
+            margin-bottom: 10px;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: var(--main-color);
+            border: none;
+            color: var(--white-color);
+        }
+        
+    }
+    .types{
+        position: absolute;
+        right: -1px;
+        top: -5px;
+        .type{
+            background-color:grey;
+            padding: 3px 5px;
+            color:var(--white-color);
+            border-radius: 3px;
+            &Last{
+                margin-right: 3px;
+            }
+            &Active{
+                background-color:var(--main-color); 
+            }
+        }
+        
+    }
+}

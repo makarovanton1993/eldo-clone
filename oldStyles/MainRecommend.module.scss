@@ -1,0 +1,30 @@
+.wrap{
+    margin-top: 30px;
+}
+.title{
+    margin-bottom: 22px;
+}
+.list{
+    display: flex;
+    margin-bottom: 10px;
+}
+.listItem{
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 15px;
+    font-weight: 400;
+    &Active{
+        background-color:#e1efd0;
+        font-weight: 600;
+    }
+    
+    &:not(:last-child){
+        margin-right: 12px;
+    }
+}
+@media only screen and (max-width: 998px) {
+    .wrap{
+        margin-top: 0px;
+    }
+}

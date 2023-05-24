@@ -1,0 +1,124 @@
+
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & .item{
+        display: flex;
+        align-items:center;
+        margin-left: 20px;
+        font-size: 13px;
+        line-height: 16px;
+        color:rgb(128, 126, 126);
+        & .link{
+            display: flex;
+            align-items:center;
+            & svg{
+                margin-right: 6px;
+            }
+            &:hover{
+                color:var(--main-color);
+               }
+        }
+        & .btn{
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+            & svg{
+                & path{
+                    fill:rgba(128, 126, 126,0.5);
+                }
+                &:hover{
+                    & path{
+                        fill:var(--main-color);
+                    } 
+                }
+                
+            }
+            & .active{
+                & path{
+                    fill:var(--main-color)!important
+                }
+            }
+            
+        }
+        & .phone{
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+}
+.listMd{
+    display: none;
+}
+@media only screen and (max-width: 1242px) {
+    .wrap{
+        width: 100%;
+    }
+    .list{
+        margin-bottom: 15px;
+        .item{
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 998px) {
+    .wrap{
+        width: initial;
+    }
+    .list{
+        display: none;
+    }
+    .listMd{
+        display: flex;
+        align-items:center;
+        margin-right: 20px;
+        & li{
+            margin: 0 15px;
+            & a {
+                & svg{
+                    & path{
+                        fill: rgb(150, 150, 150);
+                    }
+                }
+                &:hover{
+                    & svg{
+                        & path{
+                            fill: rgb(13, 202, 22);
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+@media only screen and (max-width: 760px) {
+    .listMd{
+        & li {
+            margin: 0 10px;
+        }
+        & li:first-child{
+            display: none;
+            
+        }
+        & li:last-child{
+            & a {
+                & .phone{
+                    & path{
+                        fill: rgb(150, 150, 150);
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 320px) {
+    .listMd{
+        margin-right: 0;
+        & li:nth-child(2){
+            display: none;
+        }
+    }
+}

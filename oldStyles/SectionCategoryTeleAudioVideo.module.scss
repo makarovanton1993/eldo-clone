@@ -1,0 +1,16 @@
+.wrap{
+    background-color: rgb(197, 197, 197);
+    width: 260px;
+    padding:20px 55px;
+    margin-bottom: 20px;
+}
+.title{
+    margin-bottom: 10px;
+    
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+}

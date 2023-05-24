@@ -1,0 +1,33 @@
+.title{
+    margin-bottom: 10px;
+}
+.brandsWrap{
+    margin-bottom: 15px;
+}
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 850px;
+    width: 100%;
+}
+.item{
+    max-width: 160px;
+    width: 126px;
+    height: 56px;
+    background-color: #f5f5f5;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    border: 2px solid transparent;
+    transition: border-color background-color .7s;
+    
+    &:hover{
+      border-color: green; 
+      background-color: #fff;
+    }
+    img{
+        object-fit: none;
+        max-width: 100%;
+        width: 100%;
+    }
+}

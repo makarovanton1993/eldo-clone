@@ -1,0 +1,28 @@
+.categoryLgList{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    overflow-x: scroll;
+}
+.categoryLgItem{
+    background-color: var(--grey-color);
+    padding: 0px 5px;
+    border-radius:5px;
+    margin-right: 6px;
+    max-width: 150px;
+    width: 100%;
+    display: flex;
+    white-space:nowrap;
+    & a{
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 600;
+        color:rgb(124, 124, 124);
+        & svg{
+            margin-right: 10px;
+        }
+    }
+}

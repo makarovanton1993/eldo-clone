@@ -1,0 +1,38 @@
+.wrap{
+    width: 920px;
+    margin-left: 250px;
+    & .innerWrap{
+        display: flex;
+        & .title{
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #262626;
+            margin-bottom: 22px;
+        }
+    }
+}
+@media only screen and (max-width: 1242px) {
+    .wrap{
+        margin-left: 0;
+       
+    }
+}
+@media only screen and (max-width: 998px) {
+    .wrap{
+        width: 100%;
+        padding: 20px 0;
+        & .innerWrap{
+            margin-bottom: 20px;
+        }
+        & .title{
+            display: none;
+          }
+    }
+}
+@media only screen and (max-width: 760px) {
+    .wrap{
+        padding: 0;
+    }
+}
+

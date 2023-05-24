@@ -1,0 +1,89 @@
+.wrap{
+    background-color: var(--grey-color);
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 37px;
+    position: relative;
+    z-index: 1;
+}
+.list{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 100%;
+    z-index: 1;
+    & .item{
+        position: relative;
+        padding: 0 16px;
+        height: 100%;
+        display: flex;
+        align-items:center;
+        z-index: 12;
+        &First{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            background-color: var(--main-color);
+            z-index: 1;
+            padding: 0 18px 0 16px;
+            width: 115px;
+            &:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: -4px;
+                background-color: #fff;
+                width: 9px;
+                height: 100%;
+                transform: skewX(-12deg);
+            }
+        }
+        &:last-child{
+            margin-right: 40px;
+        }
+        & .link{
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .2px;
+            color:rgba(85, 85, 85,0.7);
+            &First{
+                position: relative;
+                text-transform: none;
+                font-size: 16px;
+                font-weight: 600;
+                color: var(--white-color);
+            }
+            &Active{
+                color: #ce1037;
+                
+            }
+            
+        }
+    }
+}
+
+
+@media only screen and (max-width: 998px) {
+    .wrap{
+        margin-bottom: 10px;
+    }
+    .item{
+        padding: 0 8px;
+        & a{
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+    }
+}
+@media only screen and (max-width: 760px) {
+    .wrap{
+        display: none;
+    }
+}

@@ -1,0 +1,19 @@
+.wrap{
+    display: none;
+    & ul{
+        display: flex;
+        align-items:center;
+        overflow: scroll;
+        width: 1000px;
+        & li {
+            flex:0 0 260px;
+            margin-right: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 998px) {
+    .wrap{
+        display: block;
+    }
+}

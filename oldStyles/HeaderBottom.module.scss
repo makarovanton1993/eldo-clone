@@ -1,0 +1,26 @@
+.headerBottom{
+    position: sticky;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 11111;
+    background-color:#fff;
+    margin-bottom: 20px;
+}
+.logo{
+    max-width: 193px;
+    width: 100%;
+    display: flex;
+    margin-right: 20px;
+}
+@media only screen and (max-width: 760px) {
+    .logo{
+       position: absolute;
+       top: -108px;
+       left: 0;
+    }
+}
+@media only screen and (max-width: 320px) {
+    
+}

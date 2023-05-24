@@ -1,0 +1,32 @@
+.wrap{
+    height: 400px;
+    margin-top: 45px;
+    .lists{
+        display: flex;
+        align-items: center;
+        .createList{
+            & h4{
+                margin-bottom: 10px;
+                width: 100px;
+                margin: 0 auto 25px;
+                color:rgb(190, 190, 190);
+            }
+            & svg{
+                width: 40px;
+                height: 40px;
+                & path{
+                    stroke: var(--main-color);
+                }
+            }
+        }
+        .itemList{
+            height: 228px;
+            width: 228px;
+            border:1px dashed rgb(179, 178, 178);
+            margin-right: 15px;
+            background-color:transparent;
+            border-radius:5px;
+        }
+    }
+    
+}

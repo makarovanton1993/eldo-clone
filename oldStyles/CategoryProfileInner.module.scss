@@ -1,0 +1,28 @@
+.wrap{
+    margin-right: 40px;
+    ul{
+        width: 228px;
+        display: flex;
+        flex-direction: column;
+        li{ 
+            margin-bottom: 20px;
+            border-radius:5px;
+            align-self: start;
+            &:hover{
+                background-color:rgb(198, 197, 197);
+            }
+            a{  
+                display: flex;
+                padding: 5px 10px;
+                white-space: nowrap;
+            }
+        }
+        .activeSection{
+            color:var(--main-color);
+            font-weight: 600;
+            &:hover{
+                color:#000;
+            }
+        }
+    }
+}
