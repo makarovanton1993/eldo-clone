@@ -75,7 +75,6 @@ const WrapLink = styled(Link)`
 
 const MainCategories = () => {
   const mainCatProduct = useSelector(MainCategoriesProduct);
-  console.log(mainCatProduct)
   return (
     <Wrap>
       <List>

@@ -36,13 +36,12 @@ const TemporaryCodeBlock = ({ currentInfoUser }: any) => {
     setPinValues(copy);
     length > i && inputRef.current[i + 1].focus();
   }
-  const sendingData = async (pinValues: any) => {
 
+  const sendingData = async (pinValues: any) => {
     const { tel, id } = currentInfoUser;
     try {
       const pin = pinValues.join('');
       const user = await authorization(tel, pin, id)
-
       if (user) {
         dispatch(authStatus(true));
         // dispatch(getcurrentUser(user));
