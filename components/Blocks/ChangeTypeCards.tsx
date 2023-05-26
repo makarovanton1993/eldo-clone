@@ -2,9 +2,10 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { AiOutlineAppstore, AiOutlineAppstoreAdd } from 'react-icons/ai'
 import styled from 'styled-components'
-const Wrap = styled.div``
+const Wrap = styled.div`
+display:flex;`
 
-const WrapChangeTypeCard = styled(Link) <any>`
+const LinkChangeTypeCardInner = styled.div <any>`
     &:hover{
         svg {
             fill:#42bc0a;
@@ -13,23 +14,25 @@ const WrapChangeTypeCard = styled(Link) <any>`
     svg {
         width:28px;
         height:28px;
-        fill:${({ activeTypeCard }) => activeTypeCard ? '#42bc0a' : '#7a7a7a'};
-        
+        fill:${({ activeType }) => activeType ? '#42bc0a' : '#7a7a7a'};
     }
-    
 `
+const LinkChangeTypeCard = styled(Link) <any>``
 
 const ChangeTypeCards = ({ activeTypeCard, handleActiveTypeCard }: any) => {
-
-
+    const activeType = activeTypeCard
     return (
         <Wrap>
-            <WrapChangeTypeCard href={'#'} onClick={() => handleActiveTypeCard(0)} activeTypeCard={activeTypeCard == 0} >
-                <AiOutlineAppstoreAdd />
-            </WrapChangeTypeCard>
-            <WrapChangeTypeCard href={'#'} onClick={() => handleActiveTypeCard(1)} activeTypeCard={activeTypeCard == 1} >
-                <AiOutlineAppstore />
-            </WrapChangeTypeCard>
+            <LinkChangeTypeCard href='#' onClick={() => handleActiveTypeCard(0)}  >
+                <LinkChangeTypeCardInner activeType={activeType === 0}>
+                    <AiOutlineAppstoreAdd />
+                </LinkChangeTypeCardInner>
+            </LinkChangeTypeCard>
+            <LinkChangeTypeCard href='#' onClick={() => handleActiveTypeCard(1)}  >
+                <LinkChangeTypeCardInner activeType={activeTypeCard === 1}>
+                    <AiOutlineAppstore />
+                </LinkChangeTypeCardInner>
+            </LinkChangeTypeCard>
         </Wrap>
     )
 }
