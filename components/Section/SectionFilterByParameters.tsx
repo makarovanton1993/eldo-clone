@@ -36,7 +36,8 @@ margin-right:5px;
 const SectionFilterByParameters = ({ countProductForComparison }: any) => {
     const [visibleFilterByPrice, setVisibleFilterByPrice] = useState(true);
     const [visibleFilterByStocks, setVisibleFilterByStocks] = useState(true);
-    const [activeFilterByPriceBlock, setActiveFilterByPriceBlock] = useState(0)
+    const [activeFilterByPriceBlock, setActiveFilterByPriceBlock] = useState(0);
+    const [activeFilterByStocksBlock, setActiveFilterByStocksBlock] = useState(0);
     return (
         <Wrap>
             <TopLeftContent>
@@ -54,6 +55,8 @@ const SectionFilterByParameters = ({ countProductForComparison }: any) => {
             <FilterByStocks
                 visibleFilterByStocks={visibleFilterByStocks}
                 setVisibleFilterByStocks={setVisibleFilterByStocks}
+                activeFilterByStocksBlock={activeFilterByStocksBlock}
+                setActiveFilterByStocksBlock={setActiveFilterByStocksBlock}
             />
         </Wrap>
     )
