@@ -14,14 +14,14 @@ const ContainerProfileDelivery = styled(Div)`
   margin-bottom: 50px;
 `
 const Profiles = () => {
-    
+
   return (
     <Wrapper>
-        <CategoryProfile path={4}/>
-        <ContainerProfileDelivery>
-            <CategoryProfileInner selectCat={2}/>
-            <ProfileDeliveryBlock/>
-        </ContainerProfileDelivery>
+      <CategoryProfile path={4} />
+      <ContainerProfileDelivery>
+        <CategoryProfileInner selectCat={2} />
+        <ProfileDeliveryBlock />
+      </ContainerProfileDelivery>
     </Wrapper>
   )
 }

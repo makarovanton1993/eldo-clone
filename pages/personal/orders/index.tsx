@@ -12,8 +12,8 @@ const Orders = () => {
   // const {asPath} = useRouter();
   return (
     <Wrapper>
-      <CategoryProfile path={1}/>
-      <OrdersBlock/>
+      <CategoryProfile path={1} />
+      <OrdersBlock />
     </Wrapper>
   )
 }

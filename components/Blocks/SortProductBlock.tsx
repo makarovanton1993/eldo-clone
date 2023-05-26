@@ -26,7 +26,7 @@ font-weight:${({ activeItem }: any) => activeItem && 'bold'};
 }`
 const SortProductBlock = ({ activeSortItem, setActiveSortItem, handleChangeActiveSortItem }: any) => {
     const sortItem = [{ name: 'По популярности' }, { name: 'По цене' }, { name: 'По рейтингу' }, { name: 'По отзывам' }, { name: 'По размеру скидки' }, { name: 'По новизне' },]
-    console.log(activeSortItem)
+
     return (
         <Wrap>
             <SortSpan>Cортировать:</SortSpan>

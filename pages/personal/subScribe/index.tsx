@@ -16,10 +16,10 @@ const ContainerSubscribe = styled.div`
 const Subscribe = () => {
   return (
     <Wrapper>
-      <CategoryProfile path={4}/>
+      <CategoryProfile path={4} />
       <ContainerSubscribe>
-        <CategoryProfileInner selectCat ={3}/>
-        <SubScribeProfile/>
+        <CategoryProfileInner selectCat={3} />
+        <SubScribeProfile />
       </ContainerSubscribe>
     </Wrapper>
   )

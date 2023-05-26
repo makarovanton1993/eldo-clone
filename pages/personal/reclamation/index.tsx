@@ -16,10 +16,10 @@ const ContainerReclamation = styled.div`
 const Reclamation = () => {
   return (
     <Wrapper>
-      <CategoryProfile path={4}/>
+      <CategoryProfile path={4} />
       <ContainerReclamation>
-        <CategoryProfileInner selectCat ={4}/>
-        <ReclamationProfileBlock/>
+        <CategoryProfileInner selectCat={4} />
+        <ReclamationProfileBlock />
       </ContainerReclamation>
     </Wrapper>
   )

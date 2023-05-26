@@ -18,9 +18,9 @@ const WishList = () => {
   // const {asPath} = useRouter();
   return (
     <Wrapper>
-      <CategoryProfile path={3}/>
+      <CategoryProfile path={3} />
       <ContainerWishList>
-        <WishListBlock/>
+        <WishListBlock />
       </ContainerWishList>
     </Wrapper>
   )

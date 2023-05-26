@@ -15,10 +15,10 @@ const Wrap = styled(Div)`
 
 const MainProductDay = () => {
   return (
-   <Wrap>
-     <CategoryLg/>
-     <MainStock/>
-   </Wrap>
+    <Wrap>
+      <CategoryLg />
+      <MainStock />
+    </Wrap>
   )
 }
 

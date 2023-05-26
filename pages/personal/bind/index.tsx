@@ -18,11 +18,11 @@ const Bind = () => {
 
   return (
     <Wrapper>
-        <CategoryProfile path={4}/>
-        <ContainerBind>
-            <CategoryProfileInner selectCat={0}/>
-            <BindCardBlock/>
-        </ContainerBind>
+      <CategoryProfile path={4} />
+      <ContainerBind>
+        <CategoryProfileInner selectCat={0} />
+        <BindCardBlock />
+      </ContainerBind>
     </Wrapper>
   )
 }

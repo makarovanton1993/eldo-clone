@@ -85,7 +85,6 @@ const CategoryPopularProduct = ({ categoryTop, activeCategoryTop, setActiveCateg
     const [visibleCategoryTop, setVisibleCategoryTop] = useState(false);
 
     const router = useRouter();
-    console.log(router)
     return (
         <CategoryTopWrap>
             <CategoryTop>

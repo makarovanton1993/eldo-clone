@@ -38,35 +38,35 @@ const WrapLink = styled(Link)`
   
 `
 const MainRecommed = () => {
-  const arrProduct:any = [0,1,2,3,4,5]
+  const arrProduct: any = [0, 1, 2, 3, 4, 5]
   return (
     <Wrap>
-        <Title>
-            Рекомендуем вам
-        </Title>
-          <List>
-            <ListItemActive>
-              <WrapLink href='/1'>
-                Хиты продаж
-              </WrapLink>
-            </ListItemActive>
-            <ListItem>
-              <WrapLink  href='/2'>
-                Новогодние скидки!
-              </WrapLink>
-            </ListItem>
-            <ListItem>
-              <WrapLink  href='/3'>
-                Помощники к Новому Году
-              </WrapLink>
-            </ListItem>
-            <ListItem>
-              <WrapLink  href='/4'>
-                Новинки
-              </WrapLink>
-            </ListItem>
-          </List>
-        <SliderProductRecommned arrProducts = {arrProduct}/>
+      <Title>
+        Рекомендуем вам
+      </Title>
+      <List>
+        <ListItemActive>
+          <WrapLink href='/1'>
+            Хиты продаж
+          </WrapLink>
+        </ListItemActive>
+        <ListItem>
+          <WrapLink href='/2'>
+            Новогодние скидки!
+          </WrapLink>
+        </ListItem>
+        <ListItem>
+          <WrapLink href='/3'>
+            Помощники к Новому Году
+          </WrapLink>
+        </ListItem>
+        <ListItem>
+          <WrapLink href='/4'>
+            Новинки
+          </WrapLink>
+        </ListItem>
+      </List>
+      <SliderProductRecommned arrProducts={arrProduct} />
     </Wrap>
   )
 }

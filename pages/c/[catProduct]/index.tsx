@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CategoryPopularProduct from '../../../components/Category/CategoryPopularProduct'
 import styled from 'styled-components'
 import SortProductBlock from '../../../components/Blocks/SortProductBlock'
 import ChangeTypeCards from '../../../components/Blocks/ChangeTypeCards'
 import SectionFilterByParameters from '../../../components/Section/SectionFilterByParameters'
-import CardFullnfo from '../../../components/Card/CardFullnfo'
 import CardInfo from '../../../components/Card/CardInfo'
+import SectionProductByPurchase from '../../../components/Section/SectionProductByPurchase'
 
 const MainSectionPickProducts = styled.div`
     
@@ -23,9 +23,7 @@ width:100%;
 align-items:flex-start;
 justify-content:space-between;
 `
-const TopLeftContent = styled.div`
-    min-height:50px;
-`
+
 const TopRightContent = styled.div`
     display:flex;
     justify-content:space-between;
@@ -33,14 +31,7 @@ const TopRightContent = styled.div`
     width:100%;
 `
 
-const CountPrice = styled.div`
-    
-`
-const CountPriceSpan = styled.span`
-font-weight:400;
-    margin-left:5px;
-    color:#9d9db6;
-`
+
 
 const MainContent = styled.div`
 display:flex;
@@ -50,12 +41,20 @@ const Catid = () => {
     const [activeCategoryTop, setActiveCategoryTop] = useState(0);
     const [activeSortItem, setActiveSortItem] = useState(0);
     const [activeTypeCard, setActiveTypeCard] = useState(0);
-
+    const [countProductForComparison, setCountProductForComparison] = useState(0);
     const handleActiveTypeCard = (i: number) => {
         setActiveTypeCard(i)
     }
     const handleChangeActiveSortItem = (i: any) => {
         setActiveSortItem(i)
+    }
+    const handleAddProductForComparison = () => {
+        setCountProductForComparison(countProductForComparison + 1);
+    }
+    const handleRemoveProductForComparison = () => {
+        if (countProductForComparison > 0) {
+            setCountProductForComparison(countProductForComparison - 1)
+        }
     }
     const categoryTop = [{ id: 0, name: 'Все', catTitle: "All" },
     { id: 1, name: 'дешевые', catTitle: "All" },
@@ -72,27 +71,30 @@ const Catid = () => {
     { id: 12, name: 'с хорошей картинкой', catTitle: "All" },
     { id: 13, name: '24 дюйма', catTitle: "All" },
     ]
-
+    const products = [{ name: 'Смартфон' }, { name: 'Смартфон' }, { name: 'Смартфон' }, { name: 'Смартфон' }, { name: 'Смартфон' }];
+    console.log(countProductForComparison, 123)
+    useEffect(() => {
+        console.log('Я перезагрузился')
+    })
     return (
         <MainSectionPickProducts>
             <NameCat>Телевизоры</NameCat>
             <CategoryPopularProduct categoryTop={categoryTop} activeCategoryTop={activeCategoryTop} setActiveCategoryTop={setActiveCategoryTop} />
             <MainContent>
                 <LeftContent>
-                    <TopLeftContent>
-                        <CountPrice>
-                            10 000
-                            <CountPriceSpan>товаров</CountPriceSpan>
-                        </CountPrice>
-                    </TopLeftContent>
-                    <SectionFilterByParameters />
+
+                    <SectionFilterByParameters countProductForComparison={countProductForComparison} />
                 </LeftContent>
                 <RightContent>
                     <TopRightContent>
                         <SortProductBlock activeSortItem={activeSortItem} setActiveSortItem={setActiveSortItem} handleChangeActiveSortItem={handleChangeActiveSortItem} />
-                        <ChangeTypeCards activeTypeCard={activeTypeCard} setActiveTypeCard={setActiveTypeCard} handleActiveTypeCard={handleActiveTypeCard} />
+                        <ChangeTypeCards
+                            activeTypeCard={activeTypeCard}
+                            setActiveTypeCard={setActiveTypeCard}
+                            handleActiveTypeCard={handleActiveTypeCard}
+                        />
                     </TopRightContent>
-                    {activeTypeCard == 0 ? <CardFullnfo /> : <CardInfo />}
+                    {activeTypeCard == 0 ? products.map((item: any, i: any) => <SectionProductByPurchase key={i} countProductForComparison={countProductForComparison} handleAddProductForComparison={handleAddProductForComparison} handleRemoveProductForComparison={handleRemoveProductForComparison} />) : <CardInfo />}
                 </RightContent>
 
             </MainContent>
